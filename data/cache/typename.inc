@@ -1,0 +1,37 @@
+<?php
+$typeArr[2] = '寺院历史';
+$typeArr[3] = '公告动态';
+$typeArr[4] = '寺院动态';
+$typeArr[5] = '兴隆课堂';
+$typeArr[6] = '慈善公益';
+$typeArr[7] = '毗卢文化';
+$typeArr[8] = '广修供养';
+$typeArr[9] = '对外交流';
+$typeArr[10] = '公告动态';
+$typeArr[11] = '教界动态';
+$typeArr[12] = '永兴公告';
+$typeArr[13] = '永兴动态';
+$typeArr[14] = '佛事法会';
+$typeArr[15] = '宗教管理';
+$typeArr[16] = '毗卢文化';
+$typeArr[17] = '佛教故事';
+$typeArr[18] = '佛学常识';
+$typeArr[19] = '兴隆相册';
+$typeArr[20] = '大美兴隆';
+$typeArr[21] = '法音宣流';
+$typeArr[22] = '视界影像';
+$typeArr[23] = '兴隆课堂';
+$typeArr[24] = '广修供养';
+$typeArr[25] = '印经护生';
+$typeArr[26] = '助残助贫';
+$typeArr[27] = '建寺安僧';
+$typeArr[28] = '功德芳名';
+$typeArr[29] = '素食文化';
+$typeArr[30] = '素食菜谱';
+$typeArr[31] = '主厨介绍';
+$typeArr[32] = '禅茶一味';
+$typeArr[33] = '慈善公益';
+$typeArr[34] = '探索与发展';
+$typeArr[35] = '慧灯播种';
+$typeArr[36] = '联系我们';
+?>

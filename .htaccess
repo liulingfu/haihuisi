@@ -1,0 +1,4 @@
+# 将 RewriteEngine 模式打开
+RewriteEngine On
+# Rewrite 系统规则请勿修改
+RewriteRule ^(.*)/list-([0-9]+)-([0-9]+)-([0-9]+)\.html $1/plus/list\.php\?tid=$2&TotalResult=$3&PageNo=$4

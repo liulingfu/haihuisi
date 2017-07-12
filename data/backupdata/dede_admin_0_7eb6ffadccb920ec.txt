@@ -1,0 +1,1 @@
+INSERT INTO `dede_admin` VALUES('1','10','admin','485a264e7c69ed279fb9','admin','','','','1498547248','127.0.0.1');

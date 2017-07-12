@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /data/
+Disallow: /dede/
+Disallow: /images/
+Disallow: /include/
+Disallow: /install/
+Disallow: /member/
+Disallow: /plus/
+Disallow: /templets/
+Disallow: /uploads/

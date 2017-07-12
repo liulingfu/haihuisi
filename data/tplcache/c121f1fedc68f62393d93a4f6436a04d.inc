@@ -1,0 +1,1 @@
+<li><span style="float:right">[field:pubdate function="GetDateTimeMK(@me)"/]</span><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a></li>

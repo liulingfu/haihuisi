@@ -1,0 +1,5 @@
+<field:jkje itemname="捐款金额" autofield="1" notsend="0" type="text" isnull="true" islist="0" default=""  maxlength="250" page="">
+</field:jkje>
+
+<field:hxw itemname="回向文" autofield="1" notsend="0" type="multitext" isnull="true" islist="0" default=""  maxlength="250" page="">
+</field:hxw>
