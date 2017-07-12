@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}"/>
+    <meta name="keywords" content="{dede:global.cfg_keywords/}"/>
+    <link href="{dede:global.cfg_templets_skin/}/style/webcss.css" rel="stylesheet" type="text/css">
+    <script src="{dede:global.cfg_templets_skin/}/style/swfobject_modified.js" type="text/javascript"></script>
+</head>
+<body>
+<!--top begin-->
+<div class="top">
+    <div class="top-info">
+        <div style="float: left;position: absolute; margin-top: 10px;">
+            <img src="/images/logo.png" width="250px"/>
+        </div>
+        <div style="height: 250px;width:100%;display: inline-block;text-align: right;border:0px solid red;overflow: hidden;z-index: 1;">
+            <img src="/images/header_bg.png"/>
+        </div>
+        <div style="margin-top: -141px;height:200px; background: url(/images/header_boxbg.png) no-repeat;width:500px;
+margin-left: -100px;">
+        </div>
+    </div>
+</div>
+<div style="width:1190px;margin-left:auto;margin-right:auto;text-align: center;display:block;">
+    <div class="topmenu">
+        <div class="menu">
+            <ul>
+                <li><a href="{dede:global.cfg_cmsurl/}/">网站首页</a></li>
+                {dede:channelartlist typeid='top' row='8' currentstyle='xz'}
+				<li{dede:field.currentstyle/}>
+					<a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a>
+					<dl class="submenu">
+						{dede:channel type='son' noself='yes'} 
+						<dd><a href="[field:typelink/]">[field:typename/]</a> </dd>
+						{/dede:channel} 
+					</dl>
+				</li>
+				{/dede:channelartlist}
+            </ul>
+				
+        </div>
+    </div>
+</div>
+<script src="/images/js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	jQuery.navsub = function(level1,dytime) {
+		
+	  $(level1).mouseenter(function(){
+		  varthis = $(this);
+		  varwidth = $(this).width();
+		  delytime=setTimeout(function(){
+			varthis.find('dl').width(varwidth);
+			varthis.find('dl').slideDown();
+		},dytime);
+		
+	  });
+	  $(level1).mouseleave(function(){
+		 clearTimeout(delytime);
+		 $(this).find('dl').slideUp();
+	  });
+	  
+	};
+	$.navsub(".menu li",200);
+	
+});
+</script>
+<!--top end-->
+<div class="main">
+    <div class="ad">
+        <SCRIPT type=text/javascript>
+            var swf_width = 1190;
+            var swf_height = 283;
+            // 0xffffff:文字颜色|1:文字位置|0x0066ff:文字背景颜色|60:文字背景透明度|0xffffff:按键文字颜色|0x0066ff:按键默认颜色|0x000033:按键当前颜色|8:自动播放时间(秒)|2:图片过渡效果|1:是否显示按钮|_blank:打开窗口
+            var swf_config = "|2|||0xFFFFFF|0xFF6600||4|3|1|_blank"
+            document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="' + swf_width + '" height="' + swf_height + '">');
+            document.write('<param name="movie" value="{dede:global.cfg_templets_skin/}/style/bcastr.swf?bcastr_xml_url=templets/default/style/xml.xml"><param name="quality" value="high">');
+            document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+            document.write('<param name="FlashVars" value="bcastr_config=' + swf_config + '">');
+            document.write('<embed src="{dede:global.cfg_templets_skin/}/style/bcastr.swf?bcastr_xml_url=templets/default/style/xml.xml" wmode="opaque" FlashVars="bcastr_config=' + swf_config + '" menu="false" quality="high" width="' + swf_width + '" height="' + swf_height + '" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+            document.write('</object>');
+        </SCRIPT>
+    </div>
+    <div class="main1">
+        <div class="main-left">
+            <div class="main-left-title">
+                <div class="title-bar-font">
+                    海会动态
+                </div>
+            </div>
+            <div class="main-left-info">
+                <ul>
+
+                    {dede:arclist limit='0,7' typeid='10' titlelen='30'}
+                    <li><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a></li>
+                    {/dede:arclist}
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="main-right-title">
+                <div class="main-left-title">
+                    <div class="title-bar-font">
+                        广修供养
+                    </div>
+                </div>
+            </div>
+            <div class="main-right-info">
+                <div class="main-right-img"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/2.png"
+                                                             width="300" height="215"/></a></div>
+                <div class="main-right-info1">
+                    <ul>
+                        {dede:arclist limit='0,7' typeid='24' titlelen='100'}
+                        <li>
+                            <span style="float: left;"><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a></span>
+                            <span style="float: right;">[field:pubdate function=strftime('%Y-%m-%d',@me)/]</span>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+    <div class="main2">
+        <div class="main2-title">
+            <div class="main-left-title">
+                <div class="title-bar-font">
+                    寺院历史
+                </div>
+            </div>
+        </div>
+        <div class="main2-info">
+            <div class="main2-info-left"><img src="{dede:global.cfg_templets_skin/}/images/about.jpg" width="230"
+                                              height="145"/></div>
+            <div class="main2-info-right">
+                <div class="main2-info-right1"> {dede:sql sql='Select content from dede_arctype where id=2'} [field:content/] {/dede:sql}</div>
+                <div class="main2-info-right2">
+                    {dede:channel row='6' type='son' typeid='2'}
+                    【 <a href='[field:typelink/]' target="_blank"> [field:typename/] </a> 】
+                    {/dede:channel}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="main3">
+
+        <div class="main3-right">
+            <div class="main3-right1">
+                <div class="main3-info">
+                    <div class="main3-title">
+                        <div class="main-left-title">
+                            <div class="title-bar-font">
+                                佛门资讯
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main3-info-con">
+                        <ul>
+                            {dede:arclist limit='0,7' typeid='16' titlelen='50'}
+                            <li>
+                                <span style="float: left;"><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a></span>
+                                <span style="float: right;">[field:pubdate function=strftime('%Y-%m-%d',@me)/]</span>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </div>
+                <div class="main4-info" style="margin-right:0;">
+                    <div class="main4-title">
+                        <div class="main-left-title">
+                            <div class="title-bar-font">
+                                海会课堂
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main4-info-con">
+                        <ul>
+                            {dede:arclist limit='0,7' typeid='23' titlelen='30'}
+                            <li>
+                                <span style="float: left;"><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a></span>
+                                <span style="float: right;">[field:pubdate function=strftime('%Y-%m-%d',@me)/]</span>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="main3-right1">-->
+            <!--<div class="main3-info">-->
+            <!--<div class="main3-title"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/lm-info3.jpg" width="100%" height="45" /></a></div>-->
+            <!--<div class="main3-info-con">-->
+            <!--<ul>-->
+            <!--{dede:arclist limit='0,7' typeid='33' titlelen='30'}-->
+            <!--<li><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a>　　[field:pubdate function=strftime('%Y-%m-%d',@me)/]</li>-->
+            <!--{/dede:arclist}-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="main3-info" style="margin-right:0;">-->
+            <!--<div class="main3-title"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/lm-info4.jpg" width="100%" height="45" /></a></div>-->
+            <!--<div class="main3-info-con">-->
+            <!--<ul>-->
+            <!--{dede:arclist limit='0,7' typeid='29' titlelen='30'}-->
+            <!--<li><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a>　　[field:pubdate function=strftime('%Y-%m-%d',@me)/]</li>-->
+            <!--{/dede:arclist}-->
+            <!--</ul>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    <div class="pic">
+        <div class="pic-title">
+            <div class="main-left-title">
+                <div class="title-bar-font">
+                    海会相册
+                </div>
+            </div>
+        </div>
+        <div class="pic-info1">
+            <DIV id=demo style="OVERFLOW: hidden; WIDTH: 1180px; COLOR: #ffffff">
+                <TABLE width="100%" border=0 align=left cellPadding=0 class=mid
+                       cellspace="0">
+                    <TBODY>
+                    <TR vAlign=center>
+                        <TD vAlign=top id=demo1>
+                            <table width="10" height="10" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    {dede:arclist limit='0,7' typeid='19' titlelen='20'}
+                                    <td>
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td>
+                                                    <table width="154" height="116" border="0" cellpadding="0"
+                                                           cellspacing="1" bgcolor="#CCCCCC">
+                                                        <tr>
+                                                            <td align="center" valign="middle" bgcolor="#FFFFFF"><a
+                                                                    href="">
+                                                                <img src="[field:litpic/]"
+                                                                     width="187" height="150"/></a></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td width="20">&#160;</td>
+                                            </tr>
+                                            <tr>
+                                                <td height="25" align="center"><a href="/plus/view.php?aid=[field:id/]">[field:title/]</a></td>
+                                                <td width="20">&#160;</td>
+                                            </tr>
+                                        </table>
+                                        <table width="10" height="10" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    {/dede:arclist}
+                                </tr>
+                            </table>
+                        </TD>
+                        <TD width="12"
+                            vAlign=top id=demo2></TD>
+                    </TR>
+                    </TBODY>
+                </TABLE>
+            </DIV>
+            <SCRIPT>
+                function openNewWin(url, winName, width, height, attribute) {
+                    if (attribute == null) attribute = "";
+                    if (winName == null) winName = "";
+                    var tyWin = window.open(url, winName, 'width=' + width + ' height=' + height + 'px left=' + (screen.availWidth - width ) / 2 + ' top=' + (screen.availheight - height ) / 2 + ' ' + attribute);
+                    tyWin.focus();
+                }
+
+                var speed = 100;//速度数值越大速度越慢
+                demo2.innerHTML = demo1.innerHTML
+                function Marquee() {
+                    if (demo2.offsetWidth > demo.scrollLeft) {
+                        demo.scrollLeft += 1;
+                    }
+                    else {
+                        demo.scrollLeft -= demo1.offsetWidth;
+                    }
+                }
+                var MyMar = setInterval(Marquee, speed)
+                demo.onmouseover = function () {
+                    clearInterval(MyMar)
+                }
+                demo.onmouseout = function () {
+                    MyMar = setInterval(Marquee, speed)
+                }
+
+                function gzzs(flg) {
+                    if (flg == "1") {
+                        document.getElementById("gzzs").style.display = "";
+                    } else if (flg == "2") {
+                        document.getElementById("gzzs").style.display = "none";
+                    }
+                }
+            </SCRIPT>
+        </div>
+
+    </div>
+    <!--foot begin-->
+    {dede:include filename="footer.htm"/}
+    <!--foot end-->
+</div>
+{dede:include filename="left_right.htm"/}
+</body>
+</html>
+
+
+
+
+

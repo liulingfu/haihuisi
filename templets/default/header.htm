@@ -1,0 +1,58 @@
+<div class="top">
+    <div class="top-info">
+        <div style="float: left;position: absolute; margin-top: 10px;">
+            <img src="/images/logo.png" width="250px"/>
+        </div>
+        <div style="height: 250px;width:100%;display: inline-block;text-align: right;border:0px solid red;overflow: hidden;z-index: 1;">
+            <img src="/images/header_bg.png"/>
+        </div>
+        <div style="margin-top: -141px;height:200px; background: url(/images/header_boxbg.png) no-repeat;width:500px;
+margin-left: -100px;">
+        </div>
+    </div>
+</div>
+<div style="width:1190px;margin-left:auto;margin-right:auto;text-align: center;display:block;">
+    <div class="topmenu">
+        <div class="menu">
+            <ul>
+                <li><a href="{dede:global.cfg_cmsurl/}/">ÍøÕ¾Ê×Ò³</a></li>
+                {dede:channelartlist typeid='top' row='8' currentstyle='xz'}
+				<li{dede:field.currentstyle/}>
+					<a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a>
+					<dl class="submenu">
+						{dede:channel type='son' noself='yes'} 
+						<dd><a href="[field:typelink/]">[field:typename/]</a> </dd>
+						{/dede:channel} 
+					</dl>
+				</li>
+				{/dede:channelartlist}
+            </ul>
+				
+        </div>
+    </div>
+</div>
+
+<script src="/images/js/jquery.js"></script>
+<script>
+$(document).ready(function(){
+	jQuery.navsub = function(level1,dytime) {
+		
+	  $(level1).mouseenter(function(){
+		  varthis = $(this);
+		  varwidth = $(this).width();
+		  delytime=setTimeout(function(){
+			varthis.find('dl').width(varwidth);
+			varthis.find('dl').slideDown();
+		},dytime);
+		
+	  });
+	  $(level1).mouseleave(function(){
+		 clearTimeout(delytime);
+		 $(this).find('dl').slideUp();
+	  });
+	  
+	};
+	$.navsub(".menu li",200);
+	
+});
+</script>
